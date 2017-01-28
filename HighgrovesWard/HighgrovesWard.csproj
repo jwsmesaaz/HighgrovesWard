@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{409430D4-447D-4816-8ACA-51C4CE98FE8D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HighgrovesWard</RootNamespace>
+    <AssemblyName>HighgrovesWard</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\HighgrovesWard.dll.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\HighgrovesWard.csprojResolveAssemblyReference.cache" />
+    <Content Include="packages\Microsoft.ApplicationInsights.1.2.3\Microsoft.ApplicationInsights.1.2.3.nupkg" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0.nupkg" />
+    <Content Include="packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\content\ApplicationInsights.config.install.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\content\ApplicationInsights.config.transform" />
+    <Content Include="packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\content\ApplicationInsights.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\Microsoft.ApplicationInsights.DependencyCollector.1.2.3.nupkg" />
+    <Content Include="packages\Microsoft.ApplicationInsights.JavaScript.0.15.0-build58334\Microsoft.ApplicationInsights.JavaScript.0.15.0-build58334.nupkg" />
+    <Content Include="packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\content\ApplicationInsights.config.install.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\content\ApplicationInsights.config.transform" />
+    <Content Include="packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\content\ApplicationInsights.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3.nupkg" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\content\net40\ApplicationInsights.config.install.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\content\net40\ApplicationInsights.config.transform" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\content\net40\ApplicationInsights.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\content\net40\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\content\net40\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\content\net45\ApplicationInsights.config.install.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\content\net45\ApplicationInsights.config.transform" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\content\net45\ApplicationInsights.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\content\net45\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\content\net45\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\Microsoft.ApplicationInsights.Web.1.2.3.nupkg" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\content\ApplicationInsights.config.install.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\content\ApplicationInsights.config.transform" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\content\ApplicationInsights.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\Microsoft.ApplicationInsights.WindowsServer.1.2.3.nupkg" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\Tools\install.ps1" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\content\ApplicationInsights.config.install.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\content\ApplicationInsights.config.transform" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\content\ApplicationInsights.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3.nupkg" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\content\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\content\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0.nupkg" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\tools\init.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\tools\uninstall.ps1" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\Microsoft.Net.Compilers.1.0.0.nupkg" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\ThirdPartyNotices.rtf" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\tools\VBCSCompiler.exe.config" />
+    <Content Include="Pictures\Highgroves Header.psd" />
+    <Content Include="MasterPage.master" />
+    <Content Include="Video Pages\MasterPageVideo.master" />
+    <Content Include="Videos.xlsx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Animations\UnderConstructionHorse.gif" />
+    <Content Include="bin\HighgrovesWard.dll" />
+    <Content Include="bin\HighgrovesWard.pdb" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.Web.xml" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="ComingSoon.aspx" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="index.htm" />
+    <Content Include="Learntexting.aspx" />
+    <Content Include="Learntexting.aspx.vb" />
+    <Content Include="obj\Debug\HighgrovesWard.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\HighgrovesWard.dll" />
+    <Content Include="obj\Debug\HighgrovesWard.pdb" />
+    <Content Include="packages\Microsoft.ApplicationInsights.1.2.3\lib\net40\Microsoft.ApplicationInsights.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.1.2.3\lib\net40\Microsoft.ApplicationInsights.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.1.2.3\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.1.2.3\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.1.2.3\lib\wp8\Microsoft.ApplicationInsights.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.1.2.3\lib\wp8\Microsoft.ApplicationInsights.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net40\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net40\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net40\Microsoft.AI.DependencyCollector.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.JavaScript.0.15.0-build58334\content\scripts\ai.0.15.0-build58334.js" />
+    <Content Include="packages\Microsoft.ApplicationInsights.JavaScript.0.15.0-build58334\content\scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="packages\Microsoft.ApplicationInsights.JavaScript.0.15.0-build58334\tools\prefix.html" />
+    <Content Include="packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net40\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net40\Microsoft.AI.Web.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net40\Microsoft.AI.Web.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net40\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net40\Microsoft.AI.WindowsServer.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net40\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net40\Microsoft.AI.ServerTelemetryChannel.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.XML" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\tools\csc.exe" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\tools\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\tools\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\tools\vbc.exe" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.0.0\tools\VBCSCompiler.exe" />
+    <Content Include="Pictures\B2.png" />
+    <Content Include="Pictures\Background.png" />
+    <Content Include="Pictures\Button_options.png" />
+    <Content Include="Pictures\Capture.PNG" />
+    <Content Include="Pictures\Church Logo.png" />
+    <Content Include="Pictures\Church Logo1.png" />
+    <Content Include="Pictures\DSC00699.JPG" />
+    <Content Include="Pictures\E.png" />
+    <Content Include="Pictures\G.png" />
+    <Content Include="Pictures\Highgroves Header.jpg" />
+    <Content Include="Pictures\I.png" />
+    <Content Include="Pictures\IMG_20130118_015326.jpg" />
+    <Content Include="Pictures\keyboard-under-construction.jpg" />
+    <Content Include="Pictures\Mesa Temple.jpg" />
+    <Content Include="Pictures\N.png" />
+    <Content Include="Pictures\Only Orange.jpg" />
+    <Content Include="Pictures\Orange New.jpg" />
+    <Content Include="Pictures\orange square.png" />
+    <Content Include="Pictures\orange square174x174.png" />
+    <Content Include="Pictures\Splash2048x1536.png" />
+    <Content Include="Pictures\Splash2560x1600.png" />
+    <Content Include="Pictures\Splash640x1136.png" />
+    <Content Include="Pictures\Splash640x960.png" />
+    <Content Include="Pictures\T.png" />
+    <Content Include="Pictures\Text75x75.png" />
+    <Content Include="Pictures\Texting.jpg" />
+    <Content Include="Pictures\UnderConstruction.gif" />
+    <Content Include="Pictures\UnderConstructionHorse.gif" />
+    <Content Include="Pictures\X.png" />
+    <Content Include="Pictures\_church-of-jesus-christ-of-latter-day-saints-1340610277.jpg" />
+    <Content Include="scripts\ai.0.15.0-build58334.js" />
+    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="StyleSheet.css" />
+    <Content Include="Video Pages\2011Dance.aspx" />
+    <Content Include="Video Pages\2012Thriller.aspx" />
+    <Content Include="Video Pages\2013RepellingTrip.aspx" />
+    <Content Include="Video Pages\2013TalentShow.aspx" />
+    <Content Include="Video Pages\2013TPBishop.aspx" />
+    <Content Include="Video Pages\Examplepage.aspx" />
+    <Content Include="Video Thumbs\2011Dance.jpg" />
+    <Content Include="Video Thumbs\Repelling Trip.jpg" />
+    <Content Include="Video Thumbs\Talent Show.jpg" />
+    <Content Include="Video Thumbs\Thriller.jpg" />
+    <Content Include="Video Thumbs\TPBishop.jpg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComingSoon.aspx.cs">
+      <DependentUpon>ComingSoon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Video Pages\2011Dance.aspx.cs">
+      <DependentUpon>2011Dance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Video Pages\2012Thriller.aspx.cs">
+      <DependentUpon>2012Thriller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Video Pages\2013RepellingTrip.aspx.cs">
+      <DependentUpon>2013RepellingTrip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Video Pages\2013TalentShow.aspx.cs">
+      <DependentUpon>2013TalentShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Video Pages\2013TPBishop.aspx.cs">
+      <DependentUpon>2013TPBishop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Video Pages\Examplepage.aspx.cs">
+      <DependentUpon>Examplepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Video Pages\MasterPageVideo.master.cs">
+      <DependentUpon>MasterPageVideo.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61675</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61675/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

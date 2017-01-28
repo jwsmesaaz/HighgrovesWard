@@ -1,0 +1,84 @@
+﻿body {
+}
+RightSide
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-align: right;
+}
+container
+{
+    width: 1080px;
+    margin: 0 auto;
+}
+HLink
+{
+    padding: 5px 5px 0px 5px;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    border: medium ridge #554629;
+}
+LinkMaster
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: underline;
+    margin: 0 auto; 
+    border: 0px;
+}
+White
+{
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+border
+{
+    border: thin outset #000000;
+}
+nav
+{
+    padding: 4px;
+    border: medium ridge #FF9900;
+    color: #FFFFFF;
+}
+right
+{
+    
+}
+
+/*---------Video Styles--------*/
+
+UTubeHead
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    font-size: large;
+    font-weight: bold;
+}
+UTubecopy
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+}
+UTubeby
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    font-size: x-small;
+}
+ThumbText
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    font-size: x-small;
+    text-align: center;
+}
+ThumbVideo
+{
+    margin: 4px;
+    padding: 4px;
+    border: medium ridge #FF9900;
+    color: #FFFFFF;
+    empty-cells: hide;
+    border-spacing: 4px border: 4px ridge #FF9900;
+}
